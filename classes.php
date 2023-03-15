@@ -1,30 +1,26 @@
-<html>
-    <body>
-        <h3>This is the fruit program</h3>
-    </body>
-
     <?php
-    class Fruit {
-        public $name;
-        public $color;
+    class BasketBall {
+        private $baskets;
 
-        function __construct($name, $color){
-            $this->name = $name;
-            $this->color = $color;
+        function __construct(){
+            $this->baskets = 0;
         }
 
-        function set_name($name){
-            $this->name = $name;
+        function score(){
+            $this->baskets++;
+            echo $this->baskets;
+            
         }
 
-        function get_name(){
-            return $this->name;
-        }
+      
 }
 
-    $apple = new Fruit("Apple", "red");
+    $b1 = new BasketBall();
 
-    echo $apple->get_name();
+    echo $b1->score();
+    echo $b1->score();
+    echo $b1->score();
+    echo $b1->score();
+    echo $b1->score();
 
     ?>
-</html>
